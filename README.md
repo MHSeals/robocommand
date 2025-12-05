@@ -6,7 +6,15 @@ This is the course management software for the 2026 RoboBoat competition.
 
 The Protocol Buffer message definition file, **report.proto**, can be found in the `./proto` folder.
 
-The Python and C++ compiled outputs of report.proto can be found in the `./msgs` folder
+The Python and C++ compiled outputs of report.proto can be found in the `./msgs` folder.
+
+A simple python server for testing and debugging.
+
+A simple python client with setup instructions below.
+
+A simple C++ client example. 
+
+## Dependencies
 
 RoboCommand uses v6.32.1 of the protobuf runtime library and v32.1 of the protoc compiler.
 
