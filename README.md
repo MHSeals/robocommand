@@ -4,17 +4,17 @@ This is the course management software for the 2026 RoboBoat competition.
 
 ## Contents
 
-The Protocol Buffer message definition file, **report.proto**, can be found in the `./proto` folder.
+* The Protocol Buffer message definition file, **report.proto**, can be found in the `./proto` folder.
 
-The Python and C++ compiled outputs of report.proto can be found in the `./msgs` folder.
+* The Python and C++ compiled outputs of report.proto can be found in the `./msgs` folder.
 
-A simple python server for testing and debugging.
+* A simple python server for testing and debugging.
 
-    This test server is using the same TCP_library that the course server uses.
+  * This test server is using the same TCP_library that the course server uses.
 
-A simple python client with setup instructions below.
+* A simple python client with setup instructions below.
 
-A simple C++ client example. 
+* A simple C++ client example. 
 
 ## Dependencies
 
