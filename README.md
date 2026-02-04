@@ -10,6 +10,8 @@ The Python and C++ compiled outputs of report.proto can be found in the `./msgs`
 
 A simple python server for testing and debugging.
 
+    This test server is using the same TCP_library that the course server uses.
+
 A simple python client with setup instructions below.
 
 A simple C++ client example. 

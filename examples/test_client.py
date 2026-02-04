@@ -16,9 +16,9 @@ msg = Report(
 ts = Timestamp(); ts.FromDatetime(datetime.now(timezone.utc))
 msg.sent_at.CopyFrom(ts)
 
-# Serialize (binary protobuf) and send with 4-byte big-endian length prefix,
-wire = msg.SerializeToString()
-frame = struct.pack("!I", len(wire)) + wire + "test".encode()
+# Header($R) + 1-byte length + payload + footer(!!)
+payload = msg.SerializeToString()
+frame = b'$R' + struct.pack("!B", len(payload)) + payload + b'!!'
 
-with socket.create_connection(("localhost", 12345)) as s:
+with socket.create_connection(("localhost", 50000)) as s:
     s.sendall(frame)
