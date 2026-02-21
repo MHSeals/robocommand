@@ -1,0 +1,17 @@
+services:
+  heartbeat-server:
+    build: .
+    container_name: robocommand-heartbeat
+    restart: unless-stopped
+    ports:
+      - "50000:50000"   # TCP heartbeat receiver
+      - "8080:8080"     # Web dashboard
+    volumes:
+      - ./logs:/logs    # persist CSV logs
+    command:
+      - python
+      - -m
+      - examples.heartbeat_server
+      - --tcp-port=50000
+      - --web-port=8080
+      - --log-dir=/logs

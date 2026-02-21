@@ -1,0 +1,14 @@
+.git
+.gitignore
+__pycache__/
+*.pyc
+*.pyo
+*.csv
+logs/
+.venv/
+.uv/
+*.egg-info/
+dist/
+README.md
+examples/test_client.py
+examples/test_server.py
